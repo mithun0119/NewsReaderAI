@@ -21,11 +21,11 @@ SAVE_DIRECTORY = 'privateGPT/source_documents'
 os.makedirs(SAVE_DIRECTORY, exist_ok=True)
 
 # Function to translate text using the Google Translate API
-def translate_text(text, target_language):
+def translate_text(text):
     translator = Translator()
 
     try:
-        translation = translator.translate(text, dest=target_language)
+        translation = translator.translate(text)
         return translation.text
     except Exception as e:
         print(f'Translation failed for text: {text}. Error: {str(e)}')
@@ -53,8 +53,8 @@ for country in COUNTRIES:
                     published_at = datetime.strptime(published_at, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d_%H-%M-%S')
 
                     # Translate the article to English
-                    title_english = translate_text(title, 'en')
-                    description_english = translate_text(description, 'en')
+                    title_english = translate_text(title)
+                    description_english = translate_text(description)
 
                     # Create the file path
                     file_name = f'{published_at}_{title_english}.txt'
