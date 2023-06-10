@@ -3,11 +3,29 @@
 
 ## About
 
-TODO Write nice apealing lines about our awesome app.
+> Written by ChatGTP Ofcourse
 
-## Installation
+Introducing NewReaderAI, the ultimate news app that brings you the best of news from around the world, seamlessly translated into English. 
+
+Stay globally connected as NewReaderAI fetches news articles in various languages and provides instant translations, ensuring you access a diverse range of content regardless of the language barrier.
+
+Immerse yourself in international news, explore different perspectives, and broaden your understanding of global events. With a user-friendly interface, effortlessly navigate through translated articles and stay informed about the latest happenings worldwide. Upgrade your news experience with NewReaderAI and embark on a multilingual journey of knowledge. Download now and embrace the power of global news at your fingertips.
+
+
+## Pre-requisites:
 
 We assume you start with a fresh env
+
+You need the following versions:
+
+Python 3.10+
+GoogleTrans 3.1.0a0
+
+```bash
+pip -r requirements.txt
+```
+
+## Installation
 
 Setup NewsReaderAI Repo
 ```bash
@@ -18,9 +36,28 @@ cd NewsReaderAI
 Setup PrivateGPT Repo
 ```bash
 git clone https://github.com/imartinez/privateGPT.git
+cp -p privateGPT/example.env privateGPT/.env
 ```
 
-## Pre-requisites:
+## Run
 
-Python 3.10+
-GoogleTrans 3.1.0a0
+TODO: Combine these two steps eventually
+
+Step1: Import News
+
+We have included app.py that looks something like this:
+
+```python
+from NewsReaderAI import NewsReaderAI
+app = NewsReaderAI()
+app.fetch_news()
+```
+
+Step2: Run PrivateGPT.
+
+This starts the model ingestion and opens a prompt to interact with GPT
+
+```bash
+cd privateGPT
+python privateGPT.py
+```
