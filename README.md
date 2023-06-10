@@ -1,1 +1,1 @@
-# NewReaderAI
+# NewsReaderAI
