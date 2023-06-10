@@ -19,3 +19,8 @@ Setup PrivateGPT Repo
 ```bash
 git clone https://github.com/imartinez/privateGPT.git
 ```
+
+## Pre-requisites:
+
+Python 3.10+
+GoogleTrans 3.1.0a0
