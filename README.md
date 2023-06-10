@@ -5,7 +5,7 @@
 
 TODO Write nice apealing lines about our awesome app.
 
-## Instalation
+## Installation
 
 We assume you start with a fresh env
 
