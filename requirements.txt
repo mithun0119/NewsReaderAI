@@ -1,3 +1,12 @@
 ##Python 3.10
+
+beautifulsoup4==4.12.2
+black==23.3.0 # for formatting use `black --line-length 120 NewsReaderAI.py`
 googletrans==3.1.0a0
 requests
+
+
+# used by PrivateGPT
+gpt4all==0.3.2
+langchain==0.0.195
+python-dotenv==1.0.0
