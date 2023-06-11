@@ -82,4 +82,4 @@ python webapp.py
 ```
 
 # License
-This software is licensed under the Apache License 2.0. Feel free to use and modify it according to your needs.
+This software is licensed under the Apache License 2.0.
