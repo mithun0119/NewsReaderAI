@@ -1,7 +1,7 @@
-Answer with different embeddings.
+# Answer with different embeddings.
 
-1. all-MiniLM-L6-v2
-
+- all-MiniLM-L6-v2
+>
 > Question:
 What is the latest news about Messi?
 
