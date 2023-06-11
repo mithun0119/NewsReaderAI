@@ -30,9 +30,9 @@ Where do you get all the news from?
 
 Impression: Faster, Answers are not too bad and relevant
 
------------------------------------
+---
 
-## - all-mpnet-base-v2
+- all-mpnet-base-v2
 
 > Question:
 hi
@@ -66,9 +66,9 @@ What is the latest news about Messi?
 
  Impression: Except for one question, answers were not too great. Very slow.
 
- -------------------------------------
+ ---
 
- 3. all-MiniLM-L12-v2
+ - all-MiniLM-L12-v2
 
 
 > Question:
@@ -96,3 +96,44 @@ What is the latest news about Messi?
  The Miami Herald newspaper claims to have information regarding Lionel Messi's contract details at Inter Miami FC and how he plans to line his pockets in America for years, including an option of another season. Additionally, Apple and Adidas are reportedly working on a separate deal with him too as they were doing it previously when there was no agreement yet between the two parties about money matters involved therein, especially related to Messi's salary which can be up to $1 million per year from 2022-2026 if he stays in MLS for this contract.
 
 impression: Best replys. Slow takes about 40secs to 1min to answer. CPU load spikes by 50% when query runs.
+
+---
+
+###
+
+# MODEL_PATH=models/ggml-mpt-7b-instruct.bin
+# EMBEDDINGS_MODEL_NAME=all-MiniLM-L12-v2
+
+Update privategpt.py backend to mpt 
+llm = GPT4All(model=model_path, n_ctx=model_n_ctx, backend='mpt', callbacks=callbacks, verbose=False)
+
+> Question:
+hi
+
+> Answer:
+ Hello
+
+> Question:
+Did PSV play any matches?
+
+> Answer:
+ They played against Spartak Moscow.
+
+> Question:
+Where do you get all the news from?
+
+> Answer:
+ Well we use a combination on public APIs, private databases provided by companies to access their internal data as well some RSS feeds. In addition our editors curate content they think are interesting or important.
+
+> Question:
+What is the latest news about Messi?
+
+> Answer:
+ Lionel has just signed his contract to play for Inter Miami
+ 
+ > Question:
+What is the latest news about sports other than football?
+
+> Answer:
+ The F1 calendar next year' 08-06 0 Charles Leclerc despondent : "We are clearly doing something wrong" 07 - 06
+
