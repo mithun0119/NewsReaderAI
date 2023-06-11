@@ -3,8 +3,6 @@
 
 ## About
 
-> Written by ChatGTP Ofcourse
-
 Introducing DailyDigestAI, the ultimate news app that brings you the best of news from around the world, seamlessly translated into English. 
 
 Stay globally connected as DailyDigestAI fetches news articles in various languages and provides instant translations, ensuring you access a diverse range of content regardless of the language barrier.
