@@ -1,15 +1,15 @@
-# NewsReaderAI
+# DailyDigestAI
 ----------------
 
 ## About
 
 > Written by ChatGTP Ofcourse
 
-Introducing NewReaderAI, the ultimate news app that brings you the best of news from around the world, seamlessly translated into English. 
+Introducing DailyDigestAI, the ultimate news app that brings you the best of news from around the world, seamlessly translated into English. 
 
-Stay globally connected as NewReaderAI fetches news articles in various languages and provides instant translations, ensuring you access a diverse range of content regardless of the language barrier.
+Stay globally connected as DailyDigestAI fetches news articles in various languages and provides instant translations, ensuring you access a diverse range of content regardless of the language barrier.
 
-Immerse yourself in international news, explore different perspectives, and broaden your understanding of global events. With a user-friendly interface, effortlessly navigate through translated articles and stay informed about the latest happenings worldwide. Upgrade your news experience with NewReaderAI and embark on a multilingual journey of knowledge. Download now and embrace the power of global news at your fingertips.
+Immerse yourself in international news, explore different perspectives, and broaden your understanding of global events. With a user-friendly interface, effortlessly navigate through translated articles and stay informed about the latest happenings worldwide. Upgrade your news experience with DailyDigestAI and embark on a multilingual journey of knowledge. Download now and embrace the power of global news at your fingertips.
 
 
 ## Pre-requisites:
