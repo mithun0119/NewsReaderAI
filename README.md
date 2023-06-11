@@ -80,3 +80,6 @@ This will run a flask app that starts a Webserver, similar to chatGPT, where you
 ```bash
 python webapp.py
 ```
+
+# License
+This software is licensed under the Apache License 2.0. Feel free to use and modify it according to your needs.
