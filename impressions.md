@@ -1,7 +1,7 @@
 # Answer with different embeddings.
 
 - all-MiniLM-L6-v2
->
+
 > Question:
 What is the latest news about Messi?
 
@@ -32,7 +32,7 @@ Impression: Faster, Answers are not too bad and relevant
 
 -----------------------------------
 
-2. all-mpnet-base-v2
+## - all-mpnet-base-v2
 
 > Question:
 hi
