@@ -12,6 +12,10 @@ Stay globally connected as DailyDigestAI fetches news articles in various langua
 Immerse yourself in international news, explore different perspectives, and broaden your understanding of global events. With a user-friendly interface, effortlessly navigate through translated articles and stay informed about the latest happenings worldwide. Upgrade your news experience with DailyDigestAI and embark on a multilingual journey of knowledge. Download now and embrace the power of global news at your fingertips.
 
 
+## Demo
+
+![Webapp UI](ui.png)
+
 ## Pre-requisites:
 
 We assume you start with a fresh env
@@ -68,5 +72,3 @@ This will run aflask app that starts a Webserver, similar to chatGPT, where you 
 ```bash
 python webapp.py
 ```
-
-![Webapp UI](ui.png)
