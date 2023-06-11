@@ -20,8 +20,9 @@ We assume you start with a fresh env
 
 You need the following versions:
 
-Python 3.10+
-GoogleTrans 3.1.0a0
+- Python 3.10+
+- GoogleTrans 3.1.0a0
+- Use requirements.txt for the rest
 
 ```bash
 pip -r requirements.txt
