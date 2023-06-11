@@ -101,8 +101,10 @@ impression: Best replys. Slow takes about 40secs to 1min to answer. CPU load spi
 
 ###
 
-# MODEL_PATH=models/ggml-mpt-7b-instruct.bin
-# EMBEDDINGS_MODEL_NAME=all-MiniLM-L12-v2
+# Query with different model
+
+MODEL_PATH=models/ggml-mpt-7b-instruct.bin
+EMBEDDINGS_MODEL_NAME=all-MiniLM-L12-v2
 
 Update privategpt.py backend to mpt 
 llm = GPT4All(model=model_path, n_ctx=model_n_ctx, backend='mpt', callbacks=callbacks, verbose=False)
