@@ -76,7 +76,7 @@ python privateGPT.py
 
 Alternative Step2: Experimental UI
 
-This will run aflask app that starts a Webserver, similar to chatGPT, where you can chat on the web. 
+This will run a flask app that starts a Webserver, similar to chatGPT, where you can chat on the web. 
 ```bash
 python webapp.py
 ```
