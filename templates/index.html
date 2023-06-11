@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DailyDigestAI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #eaeaea;
+        }
+
+        .chat-container {
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            background-color: #666;
+            color: #eaeaea;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .bot-message {
+            background-color: #333;
+            color: #eaeaea;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: right;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            background-color: #333;
+            color: #eaeaea;
+            border-color: #666;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DailyDigestAI</h1>
+        <div class="chat-container" id="chat-container">
+            {% for message in conversation %}
+                {% if message[0] == 'user' %}
+                    <div class="user-message">{{ message[1] }}</div>
+                {% else %}
+                    <div class="bot-message">{{ message[1] }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <form method="POST" action="/query" id="query-form">
+            <div class="form-group">
+                <label for="query">Enter your query:</label>
+                <input type="text" class="form-control" id="query" name="query" placeholder="Type your query here">
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#query-form").submit(function(e) {
+                e.preventDefault();
+
+                var query = $("#query").val();
+                if (query.trim() === '') {
+                    return;
+                }
+
+                sendQuery(query);
+                $(this).trigger("reset");
+            });
+
+            function sendQuery(query) {
+                $.ajax({
+                    type: "POST",
+                    url: "/query",
+                    data: { query: query },
+                    success: function(response) {
+                        var messageHtml = '';
+                        messageHtml += '<div class="user-message">' + query + '</div>';
+                        messageHtml += '<div class="bot-message">' + response.response + '</div>';
+
+                        $("#chat-container").append(messageHtml);
+                        scrollToBottom();
+                    }
+                });
+            }
+
+            function scrollToBottom() {
+                var chatContainer = document.getElementById("chat-container");
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
