@@ -42,6 +42,16 @@ Setup PrivateGPT Repo
 git clone https://github.com/imartinez/privateGPT.git
 cp -p privateGPT/example.env privateGPT/.env
 ```
+.env file example
+
+```
+PERSIST_DIRECTORY=privateGPT/db
+MODEL_TYPE=GPT4All
+MODEL_PATH=privateGPT/models/ggml-gpt4all-j-v1.3-groovy.bin
+EMBEDDINGS_MODEL_NAME=all-MiniLM-L12-v2
+MODEL_N_CTX=1000
+TARGET_SOURCE_CHUNKS=4
+```
 
 ## Run
 
