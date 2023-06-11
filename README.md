@@ -61,3 +61,12 @@ This starts the model ingestion and opens a prompt to interact with GPT
 cd privateGPT
 python privateGPT.py
 ```
+
+Alternative Step2: Experimental UI
+
+This will run aflask app that starts a Webserver, similar to chatGPT, where you can chat on the web. 
+```bash
+python webapp.py
+```
+
+![Webapp UI](ui.png)
