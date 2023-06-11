@@ -13,8 +13,7 @@ class NewsReaderAI:
         self.logger = self.setup_logger()
 
         ## News API parameters
-        self.API_KEY = "0ab72b36362d4380b8b374aeb8c38d48"
-        self.API_KEY = "131353e264a04aeea5ac4a1c45b969f9"
+        self.API_KEY = '<Your API KEY here>'
         self.NEWS_API_ENDPOINT = "https://newsapi.org/v2/top-headlines"
 
         ## Model Specific Settings
