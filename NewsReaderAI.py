@@ -7,13 +7,15 @@ import logging
 
 
 class NewsReaderAI:
-    def __init__(self, refresh_articles=False) -> None:
+    def __init__(self, country, category, refresh_articles=False) -> None:
         # Basic Config
+        self.country = country
+        self.category = category
         self.refresh_articles = refresh_articles
         self.logger = self.setup_logger()
 
         ## News API parameters
-        self.API_KEY = '<Your API KEY here>'
+        self.API_KEY = '<API-KEY>'
         self.NEWS_API_ENDPOINT = "https://newsapi.org/v2/top-headlines"
 
         ## Model Specific Settings
@@ -117,11 +119,11 @@ class NewsReaderAI:
         )
 
     # Function to translate text using the Google Translate API
-    def translate_text(self, text, src="nl", dest="en"):
+    def translate_text(self, text):
         translator = Translator()
 
         try:
-            translation = translator.translate(text, src=src, dest=dest)
+            translation = translator.translate(text)
             return translation.text
         except Exception as e:
             self.logger.exception(
@@ -150,8 +152,8 @@ class NewsReaderAI:
             self.NEWS_API_ENDPOINT,
             params={
                 "apiKey": self.API_KEY,
-                "category": "sports",
-                "country": "nl",
+                "category": self.category,
+                "country": self.country,
                 "pageSize": 100,
             },
         )
